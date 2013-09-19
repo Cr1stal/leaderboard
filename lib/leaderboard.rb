@@ -743,9 +743,9 @@ class Leaderboard
     end
 
     ending_rank -= 1
-    if ending_rank > total_members_in(leaderboard_name)
-      ending_rank = total_members_in(leaderboard_name) - 1
-    end
+   # if ending_rank > total_members_in(leaderboard_name)
+   #   ending_rank = total_members_in(leaderboard_name) - 1
+   # end
 
     if @reverse
       raw_leader_data = @redis_connection.zrange(leaderboard_name, starting_rank, ending_rank, :with_scores => false)
